@@ -38,6 +38,9 @@ services:
     depends_on:
       - sonarqube
     image: nginx
+    entrypoint:
+      - sh
+      - ./nginx/nginx.sh
     networks:
       - sonarnet
     ports:
